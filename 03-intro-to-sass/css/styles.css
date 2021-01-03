@@ -1,0 +1,191 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #202020;
+  width: 100%;
+  font-size: 16px;
+}
+
+img {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 5em;
+  line-height: 1.4em;
+  padding: 1em;
+}
+
+h2 {
+  font-size: 2.5em;
+  line-height: 1.2em;
+}
+
+p {
+  line-height: 1.4em;
+}
+
+a {
+  color: #0689C6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #056795;
+}
+
+section {
+  margin-top: 3em;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+nav {
+  padding: 1em;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .logo img {
+  max-width: 100px;
+}
+
+header {
+  background-image: url("../images/splatter.png");
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+  flex: 1;
+  padding: 1em;
+}
+
+.heading span {
+  display: block;
+  font-size: 1em;
+  padding-bottom: 2em;
+  padding-top: 0.5em;
+  font-style: italic;
+}
+
+#services .service {
+  border: 1px solid #333;
+  padding: 1em;
+}
+
+#services .service-grid {
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#services .service:last-child {
+  border: 1px solid #0689C6;
+}
+
+#about .bio {
+  display: flex;
+  justify-content: space-between;
+}
+#about .bio .left-content {
+  width: 45.8333333333%;
+}
+#about .bio .right-content {
+  width: 50%;
+}
+
+#footer {
+  text-align: center;
+  padding: 1em;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 11vw;
+  }
+
+  #about .bio {
+    flex-direction: column-reverse;
+    /* puts image on top */
+  }
+  #about .bio .left-content {
+    width: 100%;
+  }
+  #about .bio .right-content {
+    width: 100%;
+    padding-bottom: 1em;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

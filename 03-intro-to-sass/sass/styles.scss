@@ -1,0 +1,140 @@
+@use '../partials/reset';
+$font: 'Roboto', sans-serif;
+$light-blue: #0689C6;
+
+body{
+    font-family: $font;
+    color: #202020;
+    width:100%;
+    font-size: 16px;
+}
+img{
+    min-width: 100%;
+    max-width: 100%;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+}
+h1{
+    font-size: 5em;
+    line-height: 1.4em;
+    padding: 1em;
+}
+h2{
+    font-size: 2.5em;
+    line-height: 1.2em;
+}
+p{
+    line-height: 1.4em;
+}
+
+a{
+    color: $light-blue;
+    text-decoration: none;
+}
+a:hover{
+    color: darken($light-blue, 10);
+}
+section{
+    margin-top:3em;
+}
+#wrapper{
+    width:100%;
+    height:100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+nav{
+    padding:1em;
+    ul{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+   
+    .logo img{
+        max-width: 100px;
+    }
+}
+header{
+    background-image: url('../images/splatter.png');
+    background-size: contain;
+    background-position: center right;
+    background-repeat:no-repeat;
+}
+#container{
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+    padding: 1em;
+}
+
+.heading{ 
+    span{
+        display: block;
+        font-size: 1em;
+        padding-bottom:2em;
+        padding-top:.5em;
+        font-style: italic;
+    }
+}
+
+%service-box{
+    border: 1px solid #333;
+    padding: 1em;
+}
+
+#services{
+    .service-grid{
+        padding-top:1em;
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .service{
+        @extend %service-box
+    }
+    .service:last-child{
+        border: 1px solid $light-blue;
+    }
+}
+
+#about{
+    .bio{
+        display:flex;
+        justify-content: space-between;
+        .left-content{
+            width: 550px / 1200px * 100%;
+        }
+        .right-content{
+            width: 600px / 1200px * 100%;
+        }
+    }
+}
+
+#footer{
+    text-align: center;
+    padding: 1em;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 767px){
+    h1{
+        font-size: 11vw;
+    }
+    #about{
+        .bio{
+      flex-direction:column-reverse;/* puts image on top */
+            .left-content{
+                width: 100%;
+                
+            }
+            .right-content{
+                width: 100%;
+                padding-bottom:1em;
+            }
+        }
+    }
+    
+}
